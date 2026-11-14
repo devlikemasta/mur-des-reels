@@ -1,0 +1,35 @@
+{
+  "name": "mur-des-reels",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Le Mur des reels : tu tapes ta niche, ton agent IA lit les reels de ses comptes un par un, sort ceux qui explosent et t'écrit le tien. Gratuit et open source, par VibesMoney.",
+  "license": "MIT",
+  "author": "VibesMoney (https://vibesmoney.com)",
+  "homepage": "https://vibesmoney.com/guides/mur-des-reels",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devlikemasta/mur-des-reels.git"
+  },
+  "keywords": ["claude-code", "agents", "ai-agents", "instagram", "reels", "threejs", "vibesmoney"],
+  "type": "module",
+  "engines": { "node": ">=22.18" },
+  "scripts": {
+    "start": "node scripts/check-node.mjs && vite build --logLevel warn && node server/index.ts --open",
+    "dev": "node scripts/dev.ts",
+    "build": "vite build",
+    "serve": "node server/index.ts",
+    "check": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p server/tsconfig.json"
+  },
+  "dependencies": {
+    "playwright-core": "^1.65.1",
+    "three": "^0.187.0",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/three": "^0.187.0",
+    "@types/ws": "^8.18.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}
